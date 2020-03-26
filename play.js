@@ -67,10 +67,35 @@ const hobbies = ["Running", "Golf", "Ski", "Tennis"];
 const printName = ({ name }) => {
   console.log(name);
 };
-printName(person);
+// printName(person);
 
 const { name, age } = person;
-console.log(name, age);
+// console.log(name, age);
 
 const [hobby1, hobby2] = hobbies;
-console.log(hobby1, hobby2);
+// console.log(hobby1, hobby2);
+
+// Async code & promises
+const fetchData = () => {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Done!");
+    }, 1500);
+  });
+  return promise;
+};
+
+setTimeout(() => {
+  console.log("Timer is done");
+  fetchData()
+    .then(text => {
+      console.log(text);
+      return fetchData();
+    })
+    .then(text2 => {
+      console.log(text2);
+    });
+}, 2000);
+
+console.log("Hello");
+console.log("Hi");
