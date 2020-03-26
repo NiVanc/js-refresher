@@ -47,8 +47,18 @@ const person = {
 
 // Arrays & array methods
 const hobbies = ["Running", "Golf", "Ski", "Tennis"];
-for (let hobby of hobbies) {
-  console.log(hobby);
-}
-console.log(hobbies.map(hobby => "Hobby: " + hobby));
-console.log(hobbies);
+// for (let hobby of hobbies) {
+//   console.log(hobby);
+// }
+// console.log(hobbies.map(hobby => "Hobby: " + hobby));
+// console.log(hobbies);
+
+// Spread & rest operators
+const copiedPerson = { ...person };
+console.log(copiedPerson);
+
+const copiedArray = [...hobbies];
+console.log(copiedArray);
+
+const toArray = (...args) => args;
+console.log(toArray(1, 2, 3, 4));
