@@ -33,3 +33,14 @@ const addRandom = () => 1 + 4;
 // This refers to what is executing the code
 // Use bind to tell JS what this should be referring to in the function that will be executed
 // When using arrow functions, this always refers to the object
+
+// Objects, properties & methods
+const person = {
+  name: "Nico",
+  age: 33,
+  greet() {
+    console.log("Hi, I am " + this.name);
+  }
+};
+
+person.greet();
