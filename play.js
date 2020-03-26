@@ -43,4 +43,12 @@ const person = {
   }
 };
 
-person.greet();
+// person.greet();
+
+// Arrays & array methods
+const hobbies = ["Running", "Golf", "Ski", "Tennis"];
+for (let hobby of hobbies) {
+  console.log(hobby);
+}
+console.log(hobbies.map(hobby => "Hobby: " + hobby));
+console.log(hobbies);
