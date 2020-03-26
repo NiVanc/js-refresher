@@ -1,22 +1,22 @@
 // The playground
 
 // Arrow functions
-const name = "Nico";
-let age = 32;
-const hasHobbies = true;
+// const name = "Nico";
+// let age = 32;
+// const hasHobbies = true;
 
-age = 33;
+// age = 33;
 
-const summarizeUser = (userName, userAge, userHasHobby) => {
-  return (
-    "Name is " +
-    userName +
-    ", age is " +
-    userAge +
-    " and the user has hobbies: " +
-    userHasHobby
-  );
-};
+// const summarizeUser = (userName, userAge, userHasHobby) => {
+//   return (
+//     "Name is " +
+//     userName +
+//     ", age is " +
+//     userAge +
+//     " and the user has hobbies: " +
+//     userHasHobby
+//   );
+// };
 
 // console.log(summarizeUser(name, age, hasHobbies));
 
@@ -54,11 +54,23 @@ const hobbies = ["Running", "Golf", "Ski", "Tennis"];
 // console.log(hobbies);
 
 // Spread & rest operators
-const copiedPerson = { ...person };
-console.log(copiedPerson);
+// const copiedPerson = { ...person };
+// console.log(copiedPerson);
 
-const copiedArray = [...hobbies];
-console.log(copiedArray);
+// const copiedArray = [...hobbies];
+// console.log(copiedArray);
 
-const toArray = (...args) => args;
-console.log(toArray(1, 2, 3, 4));
+// const toArray = (...args) => args;
+// console.log(toArray(1, 2, 3, 4));
+
+// Destructuring
+const printName = ({ name }) => {
+  console.log(name);
+};
+printName(person);
+
+const { name, age } = person;
+console.log(name, age);
+
+const [hobby1, hobby2] = hobbies;
+console.log(hobby1, hobby2);
